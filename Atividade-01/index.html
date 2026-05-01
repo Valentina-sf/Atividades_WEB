@@ -3,39 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futebol Brasileiro - Ranking de Títulos</title>
-    <style>
-        .numeros {
-            text-align: center;
-        }
-        table {
-            border-collapse: collapse;
-            margin: 0 auto;
-        }
-        img {
-            max-width: 60px;
-            display: block;
-            margin: 0 auto;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
     <!--------Título--------->
     <header>
+
        <h1>Futebol Brasileiro - Ranking de Títulos</h1>
        <span>Os melhores campeões nacionais do Brasil</span>
-       <h3><b>Menu de Navegação:</b></h3>
+       <h3><b>Menu de Navegação:</b></h3> <!---Melhor usar b ou strong?--->
+
     </header>
     <nav>
       <ul>
-        <li><a href="#ranking-de-titulos">Ranking de Títulos</a></li>
-        <li><a href="#cadastrar-jogador">Cadastrar Jogador</a></li>
-      </ul>
+       
+        <li><a href="#ranking_de_títulos">Ranking de Títulos</a></li>
+        <li><a href="#cadastrar_jogador">Cadastrar Jogador</a></li>
+     
+    </ul>
     </nav>
-    <hr>
-<div id="ranking-de-titulos">
+    <hr> <!---Linha para separar conteúdos---> <!--Faz diferença colocar ele dentro ou fora de nav?-->
+<div id="ranking_de_títulos">
+
  <h2>Classificação de Títulos Nacionais</h2>
- <p>Ranking dos clubes brasileiros com mais títulos do Campeonato Brasileiro</p>
+ <p>Ranking dos clubes brasileiros com mais títulos do Campeonato Brasileiro</p> <!--Qual a diferença de p e span?-->
+
   <!----Tabela---->
 <table border="1" width="50%" cellspacing="0" cellpadding="20">
     <thead>
@@ -129,11 +121,57 @@
             <td class="numeros">2</td>
             <td class="numeros">5</td>
         </tr>
-        <tr>
-            <td colspan="6">*87 é do Sport</td>
-        </tr>
-    </tbody>
+            <tr><td colspan="6" class="numeros"><i>*87 é do Sport</i></td>
+    </tr></tbody>
 </table>
 </div>
+
+<div id="cadastrar_jogador">
+    <h2><b>Cadastro de Jogadores</b></h2>
+    <p><b>Preecncha todos os campos abaixo para cadastrar um novo jogador</b></p>
+      <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label for="texto">Nome Completo:</label><br>
+                <input type="text" id="texto" name="texto" placeholder="Nome completo" required="">
+            </div>
+            <br>
+        <div>
+            <label for="pwd">Senha:</label><br>
+            <input type="password" id="pwd" name="pwd" placeholder="Senha" required="">
+        </div>
+            <br>
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Email" required=""> 
+            <br><br>
+        </div>
+        <div>
+            <label for="data">Data de Nascimento:</label><br>
+            <input type="date" id="data" name="data" placeholder="dd/mm/aaaa" required="">
+        </div>
+        <br>
+        <div>
+            <label for="idade">Idade:</label><br>
+            <input type="number" id="idade" name="idade" placeholder="Idade" required="">
+        </div>
+        <br>
+        <div>
+            <label for="altura">Altura (em metros):</label><br>
+            <input type="number" id="altura" name="altura" placeholder="Altura" required="">
+        </div>
+        <br>
+          <div>
+            <label>Peso(Kg):</label><br>
+            <input type="range" name="range" min="0" max="100" required="">
+        </div>
+    </fieldset>
+    
+ </div>
+   
+
+
+
+
 </body>
 </html>
