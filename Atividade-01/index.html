@@ -3,44 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Futebol Brasileiro - Ranking de Títulos</title>
+    <style>
+        td.numeros {
+            text-align: center; /* Para alinhar, centralizar os numeros que tem a etiqueta class="numeros" */
+        }
+    </style>
 </head>
 <body>
     <!--------Título--------->
     <header>
-
-       <h1>Futebol Brasileiro - Ranking de Títulos</h1>
-       <span>Os melhores campeões nacionais do Brasil</span>
-       <h3><b>Menu de Navegação:</b></h3> <!---Melhor usar b ou strong?--->
-
+        <h1>Futebol Brasileiro - Ranking de Títulos</h1>
+        <span>Os melhores campeões nacionais do Brasil</span>
+        <h3><strong>Menu de Navegação:</strong></h3> <!---Melhor usar b ou strong?--->
     </header>
     <nav>
-      <ul>
-       
-        <li><a href="#ranking_de_títulos">Ranking de Títulos</a></li>
-        <li><a href="#cadastrar_jogador">Cadastrar Jogador</a></li>
-     
-    </ul>
+        <ul>
+            <li><a href="#ranking_de_títulos">Ranking de Títulos</a></li>
+            <li><a href="#cadastrar_jogador">Cadastrar Jogador</a></li>
+        </ul>
     </nav>
     <hr> <!---Linha para separar conteúdos---> <!--Faz diferença colocar ele dentro ou fora de nav?-->
-<div id="ranking_de_títulos">
+    <div id="ranking_de_títulos">
+        <h2>Classificação de Títulos Nacionais</h2>
+        <p>Ranking dos clubes brasileiros com mais títulos do Campeonato Brasileiro</p> <!--Qual a diferença de p e span?-->
 
- <h2>Classificação de Títulos Nacionais</h2>
- <p>Ranking dos clubes brasileiros com mais títulos do Campeonato Brasileiro</p> <!--Qual a diferença de p e span?-->
-
-  <!----Tabela---->
-<table border="1" width="50%" cellspacing="0" cellpadding="20">
-    <thead>
-        <tr>
-            <th>Posição</th>
-            <th>Escudo</th>
-            <th>Time</th>
-            <th>Títulos Brasileiros</th>
-            <th>Copa do Brasil</th>
-            <th>Total</th>
-        </tr>
-    </thead>
-    <tbody>
+        <!----Tabela---->
+        <table border="1" cellspacing="0" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Escudo</th>
+                    <th>Time</th>
+                    <th>Títulos Brasileiros</th>
+                    <th>Copa do Brasil</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
         <tr>
             <td class="numeros">1°</td>
             <td><img src="img/maiorCampeao.png" alt="Palmeiras"></td>
@@ -125,53 +125,185 @@
     </tr></tbody>
 </table>
 </div>
-
-<div id="cadastrar_jogador">
-    <h2><b>Cadastro de Jogadores</b></h2>
-    <p><b>Preecncha todos os campos abaixo para cadastrar um novo jogador</b></p>
-      <fieldset>
-            <legend>Dados Pessoais</legend>
-            <div>
-                <label for="texto">Nome Completo:</label><br>
-                <input type="text" id="texto" name="texto" placeholder="Nome completo" required="">
-            </div>
-            <br>
-        <div>
-            <label for="pwd">Senha:</label><br>
-            <input type="password" id="pwd" name="pwd" placeholder="Senha" required="">
-        </div>
-            <br>
-        <div>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="Email" required=""> 
+    <hr>
+    <div id="cadastrar_jogador">
+        <h2><strong>Cadastro de Jogadores</strong></h2>
+        <p><strong>Preencha todos os campos abaixo para cadastrar um novo jogador.</strong></p>
+        <form> <!---form para criar um formulário e consequentemente os botões de cadastrar jogador funcionarem--->
+            <fieldset> <!---fieldset é para deixar os elementos agrupados dentro da caixinha--->
+                <legend>Dados Pessoais</legend> <!---legend é para colocar um título dentro da caixinha--->
+                <div>
+                    <label for="texto">Nome Completo:</label><br>
+                    <input type="text" id="texto" name="texto" placeholder="Nome completo" required>
+                </div>
+                <br>
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <br><br>
+                </div>
+                <div>
+                    <label for="pwd">Senha:</label><br> <!---pwd é campo para senha--->
+                    <input type="password" id="pwd" name="pwd" placeholder="Senha" required>
+                </div>
+                <br>
+                <div>
+                    <label for="data">Data de Nascimento:</label><br>
+                    <input type="date" id="data" name="data" placeholder="dd/mm/aaaa" required>
+                </div>
+                <br>
+                <div>
+                    <label for="idade">Idade:</label><br>
+                    <input type="number" id="idade" name="idade" placeholder="Idade" required>
+                </div>
+                <br>
+                <div>
+                    <label for="altura">Altura (em metros):</label><br>
+                    <input type="number" id="altura" name="altura" placeholder="Altura" step="0.01" required> <!---step="0.01" para contar casas decimais--->
+                </div>
+                <br>
+                <div>
+                    <label>Peso(Kg):</label><br>
+                    <input type="range" name="range" min="0" max="100" required>
+                    <span>75kg</span>
+                </div>
+                <br>
+                <div>
+                    <label for="number">Telefone:</label><br>
+                    <input type="number" id="number" name="number" placeholder="XX-XXXXXXX-XX" required>
+                </div>
+                <br>
+                <div>
+                    <label for="site-pessoal">Site Pessoal:</label><br>
+                    <input type="url" id="site-pessoal" name="site-pessoal" placeholder="https://exemplo.com" required>
+                </div>
+                <br>
+                <div>
+                    <label for="cor-favorita">Cor Favorita:</label><br>
+                    <input type="color" id="cor-favorita" name="cor-favorita" required>
+                </div>
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Dados Profissionais:</legend>
+                <div>
+                    <br>
+                    <label for="clube">Selecione o Clube:</label><br>
+                    <select id="clube" name="clube" required> <!---select e option value para criar uma aba com opçoes selecionaveis--->
+                        <option value="">-- Escolha um clube --</option>
+                        <option value="palmeiras">Palmeiras</option>
+                        <option value="flamengo">Flamengo</option>
+                        <option value="corinthians">Corinthians</option>
+                        <option value="cruzeiro">Cruzeiro</option>
+                        <option value="santos">Santos</option>
+                        <option value="sao paulo">São Paulo</option>
+                        <option value="gremio">Grêmio</option>
+                        <option value="vasco da gama">Vasco da Gama</option>
+                        <option value="fluminense">Fluminense</option>
+                        <option value="atletico mineiro">Atlético Mineiro</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="posicao">Posição Principal:</label><br>
+                    <select id="posicao" name="posicao" size="5" required> <!---size para mostrar mais de uma opção--->
+                        <option value="zagueiro">Zagueiro</option>
+                        <option value="lateral-direito">Lateral-direito</option>
+                        <option value="lateral-esquerdo">Lateral-esquerdo</option>
+                        <option value="volante">Volante</option>
+                        <option value="meio-campo">Meio-campo</option>
+                        <option value="ponta-direita">Ponta-direita</option>
+                        <option value="ponta-esquerda">Ponta-esquerda</option>
+                        <option value="atacante">Atacante</option>
+                        <option value="goleiro">Goleiro</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="numero-camisa">Número da Camisa:</label><br>
+                    <input type="number" id="numero-camisa" name="numero-camisa" required>
+                </div>
+                <br>
+                <div>
+                    <label for="salario">Salário (R$):</label><br>
+                    <input type="number" id="salario" name="salario" placeholder="Ex: 50000.00" required>
+                </div>
+                <br>
+                <div>
+                    <label for="data-vencimento">Data de Vencimento do Contrato:</label><br>
+                    <input type="date" id="data-vencimento" name="data-vencimento" required>
+                </div>
+                <br>
+                <div>
+                    <label for="horario-treino">Horário de Treino Preferido:</label><br>
+                    <input type="time" id="horario-treino" name="horario-treino" required>
+                </div>
+                <br>
+                <div>
+                    <label for="data-hora-partida">Data e Hora da Última Partida:</label><br>
+                    <input type="datetime-local" id="data-hora-partida" name="data-hora-partida" placeholder="dd/mm/aaaa hh:mm" required>
+                </div>
+                <br>
+                <div>
+                    <label for="mes-ano-contratacao">Mês/Ano de Contratação:</label><br>
+                    <input type="month" id="mes-ano-contratacao" name="mes-ano-contratacao" placeholder="mm/aaaa" required>
+                </div>
+                <br>
+                <div>
+                    <label for="semana-folga">Semana de Folga:</label><br>
+                    <input type="week" id="semana-folga" name="semana-folga">
+                </div>
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Características:</legend>
+                <br>
+                <div>
+                    <label for="pe-dominante"><strong>Pé Dominante:</strong></label><br>
+                    <input type="radio" id="pe-direito" name="pe-dominante" value="direito" required> Direito <br><!---radio para criar opções de escolha única--->
+                    <input type="radio" id="pe-esquerdo" name="pe-dominante" value="esquerdo" required> Esquerdo <br>
+                    <input type="radio" id="pe-ambidestro" name="pe-dominante" value="ambidestro" required> Ambidestro <br>
+                </div>
+                <br>
+                <div>
+                    <label><strong>Habilidades Especiais:</strong></label><br>
+                    <input type="checkbox" id="habilidade-faltas" name="habilidades-especiais" value="cobrador de faltas"> Cobrador de Faltas <br> <!---checkbox para criar opções de escolha múltipla--->
+                    <input type="checkbox" id="habilidade-penaltis" name="habilidades-especiais" value="cobrador de penaltis"> Cobrador de Pênaltis <br>
+                    <input type="checkbox" id="habilidade-capitao" name="habilidades-especiais" value="potencial capitao"> Potencial Capitão <br>
+                    <input type="checkbox" id="habilidade-selecao" name="habilidades-especiais" value="convocavel para a seleção"> Convocável para a Seleção <br>
+                </div>
+                <br>
+                <div>
+                    <label for="biografia">Biografia do Jogador:</label><br>
+                    <textarea id="biografia" name="biografia" rows="5" cols="50" placeholder="Escreva uma breve biografia do jogador ..." required></textarea> <!---textarea para criar um campo de texto --->
+                </div>
+                <br>
+                <div>
+                    <label for="foto">Upload de Foto do Jogador:</label><br>
+                    <input type="file" id="foto" name="foto" accept="image/*" required> <!---file para criar um campo de upload de arquivos--->
+                </div>
+                <br>
+                <div>
+                    <label for="pesquisa-estatisticas">Pesquisar Estatísticas:</label><br>
+                    <input type="search" id="pesquisa-estatisticas" name="pesquisa-estatisticas" placeholder="Digite para buscar..." required> <!---search para criar um campo de pesquisa--->
+                </div>
+                <br>
+            </fieldset>
             <br><br>
-        </div>
-        <div>
-            <label for="data">Data de Nascimento:</label><br>
-            <input type="date" id="data" name="data" placeholder="dd/mm/aaaa" required="">
-        </div>
+            <div>
+                <button type="submit">Cadastrar Jogador</button> <!---button (submit) para criar um botão de enviar o formulário--->
+                <button type="reset">Limpar Formulário</button> <!---button (reset) para criar um botão de resetar o formulário--->
+                <button>Ajuda</button>
+            </div>
+        </form>
         <br>
-        <div>
-            <label for="idade">Idade:</label><br>
-            <input type="number" id="idade" name="idade" placeholder="Idade" required="">
-        </div>
-        <br>
-        <div>
-            <label for="altura">Altura (em metros):</label><br>
-            <input type="number" id="altura" name="altura" placeholder="Altura" required="">
-        </div>
-        <br>
-          <div>
-            <label>Peso(Kg):</label><br>
-            <input type="range" name="range" min="0" max="100" required="">
-        </div>
-    </fieldset>
-    
- </div>
-   
+        <hr>
+    </div>
 
-
-
+    <footer>
+        <h4 align="center"><b>Ciência da Computação - IFBA</b></h4>
+        <p align="center">&copy; 2026.1 Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
