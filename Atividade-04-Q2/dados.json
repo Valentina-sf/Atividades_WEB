@@ -1,0 +1,14 @@
+[
+  {
+    "titulo": "Algoritmos",
+    "descricao": "Sequência de passos utilizada para resolver um problema computacional."
+  },
+  {
+    "titulo": "Banco de Dados",
+    "descricao": "Sistema utilizado para armazenar e organizar informações."
+  },
+  {
+    "titulo": "Desenvolvimento Web",
+    "descricao": "Área voltada para a criação de sites e aplicações para internet."
+  }
+]
